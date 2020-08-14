@@ -8,8 +8,9 @@ void main() {
   var floatNumber = 89.64;
   var arr = ['a', 'b'];
   var obj = {
-    'name': 'Yancey',
-    'age': 18,
+    'firstName': 'Yancey',
+    'lastName': 'Leo',
+    'greeting': (String msg) => 'hello, $msg',
   };
 
   // 不能给已定义类型的变量, 重新赋予其他类型的值
