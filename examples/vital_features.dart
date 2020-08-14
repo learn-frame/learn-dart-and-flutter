@@ -129,5 +129,5 @@ void printName(String firstName, String lastName, {String suffix = ''}) {
 }
 
 /* 
-* Exception
+* Exceptions
  */
