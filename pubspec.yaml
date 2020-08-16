@@ -1,5 +1,5 @@
-name: suki_chat
-description: SukiChat is an social media mobile application, which is created by Flutter, GraphQL and more...
+name: learn_dart_and_flutter
+description: Learning Dart programming language and Flutter.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
