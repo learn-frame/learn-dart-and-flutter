@@ -59,6 +59,10 @@ void listMapSet() {
   print(list);
   print(set);
   print(map);
+
+  print(anEmptyListOfDouble);
+  print(anEmptySetOfString);
+  print(anEmptyMapOfDoublesToInts);
 }
 
 /* 

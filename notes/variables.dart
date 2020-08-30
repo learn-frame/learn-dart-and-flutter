@@ -1,7 +1,3 @@
-// 所有变量引用都是对象, 每个对象都是一个类的实例. 数字, 函数以及 null 都是对象.
-// 所有的类都继承于 Object 类
-// dart 没有 public private 等限定符, 它通过下划线来表示私有成员
-
 void main() {
   var string = '字符串';
   var intNumber = 123;
@@ -42,4 +38,7 @@ void main() {
   * const 是编译时常量, 意味着不能赋予动态的值, 比如 DateTime.now(), 而 final 则可以
   * 如果使用 const 修饰类中的变量，则必须加上 static 关键字，即 static const
    */
+
+  print(
+      '$string, $intNumber, $floatNumber. $arr, $obj, $undefinedVar, $anyType, $anyTypes, $currTime, $firstName');
 }

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 var age = 24;
 var obj = {'name': 'yancey', age: 18};
 var arr = [1.2, 2.2, 3.3, 4.4];
