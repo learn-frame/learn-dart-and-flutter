@@ -38,7 +38,4 @@ void main() {
   * const 是编译时常量, 意味着不能赋予动态的值, 比如 DateTime.now(), 而 final 则可以
   * 如果使用 const 修饰类中的变量，则必须加上 static 关键字，即 static const
    */
-
-  print(
-      '$string, $intNumber, $floatNumber. $arr, $obj, $undefinedVar, $anyType, $anyTypes, $currTime, $firstName');
 }
