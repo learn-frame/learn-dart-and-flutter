@@ -15,6 +15,7 @@ void main() {
   // 对于未赋初值的变量, 可以给它赋任何类型的值
   // 未赋初值的变量, 等价于赋值了 null
   var undefinedVar;
+  print(undefinedVar == null); // true
   undefinedVar = 1;
   undefinedVar = 'xx';
 
@@ -27,15 +28,28 @@ void main() {
   anyTypes = [];
 
   final currTime = DateTime.now();
-  // currTime = DateTime.now();
+  // currTime = DateTime.now(); // 出错
 
   const firstName = 'Yancey';
-  // firstName = '';
+  // firstName = ''; // 出错
 
-  /* 
+  // const 关键字不仅仅可以用来定义常量, 还可以用来创建常量值, 当然大家都不会这么写
+  var foo = const [];
+  final bar = const [];
+
+// 强制类型转换
+  const Object i = 3;
+  const list = [i as int];
+  const map = {if (i is int) i: "int"};
+  const set = {if (list is List<int>) ...list};
+
+  list.add(1);
+  map[1] = 'hello';
+}
+
+/* 
   * const 和 final 的区别:
   * 两者都必须初始化, 初始化后都不可被改变
   * const 是编译时常量, 意味着不能赋予动态的值, 比如 DateTime.now(), 而 final 则可以
   * 如果使用 const 修饰类中的变量，则必须加上 static 关键字，即 static const
    */
-}
