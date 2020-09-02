@@ -12,7 +12,7 @@
 // import 'dart:math'
 
 // show 关键组表示只导入库的某一部分
-import 'dart:math' show max, Random;
+import 'dart:math' show max, Random, pi, sin;
 
 void main() {
   // int 的属性和方法可参考
@@ -48,8 +48,11 @@ void main() {
 
   // 使用 Math 库
   Random randomNum = new Random(hex);
-  print(randomNum.nextInt(100));
+  print(randomNum.nextInt(100)); // 23
 
   var maxInt = max(10, 20);
-  print(maxInt);
+  print(maxInt); // 20
+
+  var thirtyDegreeAngle = sin((pi / 180) * 30);
+  print(thirtyDegreeAngle); // 0.49999999999999994
 }
