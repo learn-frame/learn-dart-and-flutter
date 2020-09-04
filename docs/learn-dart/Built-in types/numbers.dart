@@ -8,6 +8,12 @@
 /// 对于一些数学运算, 你可以查看 dart:math 库中的 API
 /// https://api.dart.dev/stable/dart-math/dart-math-library.html
 
+// 导入整个库
+// import 'dart:math'
+
+// show 关键组表示只导入库的某一部分
+import 'dart:math' show max, Random, pi, sin;
+
 void main() {
   // int 的属性和方法可参考
   // https://api.dart.dev/stable/dart-core/int-class.html
@@ -39,4 +45,14 @@ void main() {
   assert((3 << 1) == 6); // 0011 << 1 == 0110
   assert((3 >> 1) == 1); // 0011 >> 1 == 0001
   assert((3 | 4) == 7); // 0011 | 0100 == 0111
+
+  // 使用 Math 库
+  Random randomNum = new Random(hex);
+  print(randomNum.nextInt(100)); // 23
+
+  var maxInt = max(10, 20);
+  print(maxInt); // 20
+
+  var thirtyDegreeAngle = sin((pi / 180) * 30);
+  print(thirtyDegreeAngle); // 0.49999999999999994
 }
