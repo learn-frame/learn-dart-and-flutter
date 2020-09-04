@@ -30,10 +30,10 @@ void main() {
   double z = 1; // z 变成了 1.0
 
   // 字符串和数字类型之间的转换
-  int.parse('1');
-  double.parse('1.1');
-  1.toString();
-  3.14159.toStringAsFixed(2);
+  int.parse('1'); // String -> int
+  double.parse('1.1'); // String -> double
+  1.toString(); // int -> String
+  3.14159.toStringAsFixed(2); // double -> String
 
   // int 类型的数字可以使用一些位运算符
   assert((3 << 1) == 6); // 0011 << 1 == 0110
