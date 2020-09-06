@@ -33,7 +33,7 @@ void main() {
   const firstName = 'Yancey';
   // firstName = ''; // 出错
 
-  // const 关键字不仅仅可以用来定义常量, 还可以用来创建常量值, 当然大家都不会这么写
+  // const 关键字不仅仅可以用来定义常量, 还可以用来创建常量值
   var foo = const [];
   final bar = const [];
 
@@ -51,5 +51,9 @@ void main() {
   * const 和 final 的区别:
   * 两者都必须初始化, 初始化后都不可被改变
   * const 是编译时常量, 意味着不能赋予动态的值, 比如 DateTime.now(), 而 final 则可以
-  * 如果使用 const 修饰类中的变量，则必须加上 static 关键字，即 static const
+  * 如果使用 const 修饰类中的变量, 则必须加上 static 关键字, 即 static const
    */
+
+// 变量的值不能改变, 即不能重新赋值, 是'编译时常量' (compile-time constant)
+// 变量的引用地址不能改变, 而引用地址里的内容可以变, 
+// 是'运行时不变量' (runtime immutable variable)
