@@ -1,6 +1,6 @@
 /// Sets
 ///
-/// Sets 同样支持扩展运算符, Collection If 和 Collection For
+/// Set 同样支持扩展运算符, Collection If 和 Collection For
 
 void main() {
   // Set 字面量
