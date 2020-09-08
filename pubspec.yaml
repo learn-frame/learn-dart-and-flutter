@@ -31,6 +31,7 @@ dependencies:
   flutter_launcher_icons: ^0.7.5
   english_words: ^3.1.5
   graphql_flutter: ^3.1.0
+  characters: ^1.0.0
 
 dev_dependencies:
   flutter_test:
