@@ -1,6 +1,7 @@
 /// 数组
 ///
 /// 除常规操作, List 还支持 Collection If 和 Collection For
+/// 注意: Dart 中的数组会存在数组越界的行为
 
 void main() {
   const constantList = [1, 2, 3];
@@ -36,4 +37,7 @@ void main() {
   var listOfInts = [1, 2, 3];
   var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
   print(listOfStrings); // [#0, #1, #2, #3]
+
+  // 数组越界
+  // print(listOfInts[3]);
 }
