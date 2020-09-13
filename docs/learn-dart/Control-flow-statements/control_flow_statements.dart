@@ -79,4 +79,10 @@ void main() {
   // /docs/learn-dart/Control%20flow%20statements/control_flow_statements.dart'
   // : Failed assertion: line 74 pos 10: 'null': is not true.
   assert(1 == null);
+
+  const urlString = 'https://yanceyleo.com';
+
+  // assert 还可以添加第二个参数, 用来做一些提示
+  assert(urlString.startsWith('https'),
+      'URL ($urlString) should start with "https".');
 }
