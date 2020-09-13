@@ -22,7 +22,7 @@
 ///
 
 import 'dart:html';
-import '../classes.dart';
+import '../Classes/classes.dart';
 
 void main() {
   // 在 Dart 中 null 和 null 是相等的, 注意和 JavaScript 区分
@@ -134,4 +134,7 @@ void main() {
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   // 其他运算符: 条件访问成员(?.)
+  String sayAnything({String str}) {
+    return str?.toLowerCase();
+  }
 }

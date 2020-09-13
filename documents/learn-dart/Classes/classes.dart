@@ -5,6 +5,30 @@
 // 1. 创建类的实例可以不用 new
 // 2.
 
+/* 
+* Getter 和 Setter
+ */
+class GetterSetter {
+  int _aProperty = 0;
+
+  static const List<int> _values = [];
+
+  // getter 可用来定义计算属性
+  int get count {
+    return _values.length;
+  }
+
+  // getter
+  int get aProperty => _aProperty;
+
+  // setter
+  set aProperty(int value) {
+    if (value >= 0) {
+      _aProperty = value;
+    }
+  }
+}
+
 void main() {
   var voyager = new Spacecraft('旅行者一号', DateTime(1977, 9, 5));
   voyager.describe();
