@@ -56,15 +56,15 @@ void main(List<String> arguments) {
 
   // 可选参数之 - 命名参数
   void enableFlagsNamed(String requiredParam,
-      {int bold, bool hidden, @required Animal animal}) {
+      {int bold, @required bool hidden, @required Animal animal}) {
     print('$requiredParam $bold $hidden $animal');
   }
 
   // 可选参数之 - 命名参数需要这样调用
   // {} 中的三个参数都是可选的, 比如你可以不传入 content 这个参数
   // 即便如此, 你也可以给参数加上 @required 的注解
-  // TODO: 此时调用函数会报 warning, 但不会影响运行
-  enableFlagsNamed('', bold: 500, hidden: false, animal: Animal('Husky', 18));
+  // 此时调用函数会报 warning, 但不会影响运行: The parameter 'hidden' is required
+  enableFlagsNamed('', bold: 500, animal: Animal('Husky', 18));
 
   // 可选参数之 - 位置参数
   void sayAnything(String from, String msg,
