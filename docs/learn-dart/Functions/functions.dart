@@ -20,6 +20,12 @@
 
 import 'package:meta/meta.dart';
 
+// 斐波那契镇楼
+int fibonacci(int n) {
+  if (n == 0 || n == 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
 class Animal {
   String name;
   int age;
