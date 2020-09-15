@@ -18,12 +18,21 @@ class Person {
   // Dart 独有的语法糖
   Person(this.firstName, this.lastName, this.age);
 
-  // 命名式构造函数, 很骚
+  // 命名式构造函数
+  // TODO: 子类不能继承父类的命名式构造函数, 如果你想在子类中提供一个与父类命名
+  // 构造函数名字一样的命名构造函数, 则需要在子类中显式地声明
   Person.defaultPerson(String firstName) {
     firstName = firstName;
     lastName = 'Leo';
     age = 18;
   }
+}
+
+class Male extends Person {
+  int incoming;
+
+  Male(String firstName, String lastName, int age, this.incoming)
+      : super(firstName, lastName, age);
 }
 
 void main(List<String> args) {
