@@ -5,7 +5,7 @@
 import 'dart:io';
 import '../Classes/classes.dart';
 
-var voyager = new Spacecraft('旅行者一号', DateTime(1977, 9, 5));
+var voyager = new Spacecraft('旅行者一号', 4, DateTime(1977, 9, 5));
 
 void main() {
   report(voyager, ['小李']);

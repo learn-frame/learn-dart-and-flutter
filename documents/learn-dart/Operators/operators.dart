@@ -39,7 +39,7 @@ void main() {
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   // 通过 as, is, is! 进行一些类型检查和类型断言
-  var spacecraft = Spacecraft('', DateTime.now());
+  var spacecraft = Spacecraft('', 44, DateTime.now());
 
   // 类型断言
   (spacecraft as Spacecraft).describe();

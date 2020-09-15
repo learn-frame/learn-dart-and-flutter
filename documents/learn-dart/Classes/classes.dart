@@ -1,115 +1,59 @@
-/* 
-* Class
-*/
+import 'dart:math';
 
-// 1. 创建类的实例可以不用 new
-// 2.
-
-/* 
-* Getter 和 Setter
- */
-class GetterSetter {
-  int _aProperty = 0;
-
-  static const List<int> _values = [];
-
-  // getter 可用来定义计算属性
-  int get count {
-    return _values.length;
-  }
-
-  // getter
-  int get aProperty => _aProperty;
-
-  // setter
-  set aProperty(int value) {
-    if (value >= 0) {
-      _aProperty = value;
-    }
-  }
-}
-
-void main() {
-  var voyager = new Spacecraft('旅行者一号', DateTime(1977, 9, 5));
-  voyager.describe();
-
-  var voyager3 = new Spacecraft.unlaunched('旅行者三号');
-  voyager3.describe();
-}
+/// 类
+///
 
 class Spacecraft {
-  String name;
-  DateTime launchDate;
+  String name; // 宇宙飞船名
+  double side; // 边长
+  DateTime launchDate; // 发射时间
 
   // 构造函数
-  Spacecraft(this.name, this.launchDate) {
+  Spacecraft(
+    this.name,
+    this.side,
+    this.launchDate,
+  ) {
     // 这里可以实现初始化代码
   }
 
   // 命名构造函数，转发到默认构造函数
-  Spacecraft.unlaunched(String name) : this(name, null);
+  Spacecraft.unlaunched(String name, double side)
+      : this(
+          name,
+          side,
+          null,
+        );
 
-  // getter, 只读的非 final 的属性
-  int get launchYear => launchDate?.year;
+  // 实例变量
+  int instanceVarible = 1;
+
+  // getter
+  double get area => side * side;
+
+  // setter
+  set area(double value) => side = sqrt(value);
 
   // 实例方法
-  void describe() {
-    print('宇宙飞船：$name');
+  String describe() {
     if (launchDate != null) {
-      int years = DateTime.now().difference(launchDate).inDays ~/ 365;
-      print('发射时间：$launchYear ($years years ago)');
+      final years = DateTime.now().difference(launchDate).inDays ~/ 365;
+      return '宇宙飞船：$name 的发射时间：${launchDate?.year}年 ($years years ago)';
     } else {
-      print('尚未发射');
+      return '尚未发射';
     }
   }
 }
 
-// 继承
-class Orbiter extends Spacecraft {
-  double altitude;
-  Orbiter(String name, DateTime launchDate, this.altitude)
-      : super(name, launchDate);
-}
+void main(List<String> args) {
+  final spacecraft =
+      new Spacecraft('Crew Dragon', 4, DateTime.parse('2019-01-01'));
 
-class Piloted {
-  int astronauts = 1;
-  void describeCrew() {
-    print('宇航员人数：$astronauts');
-  }
-}
+  print(spacecraft.instanceVarible); // 实例变量
+  print(spacecraft.describe()); // 实例方法
 
-// Mixin
-class PilotedCraft extends Spacecraft with Piloted {
-  double altitude;
-  PilotedCraft(String name, DateTime launchDate, this.altitude)
-      : super(name, launchDate);
-}
+  print(spacecraft.area); // getter
+  spacecraft.area = 25; // setter
 
-// dart 没有 interface 关键字, 所有的类都隐式定义了一个接口. 因此, 任意类都可以作为接口被实现.
-class MockSpaceship implements Spacecraft {
-  @override
-  DateTime launchDate;
-
-  @override
-  String name;
-
-  @override
-  void describe() {
-    // TODO: implement describe
-  }
-
-  @override
-  // TODO: implement launchYear
-  int get launchYear => throw UnimplementedError();
-}
-
-// 抽象类
-abstract class Describable {
-  void describe();
-
-  void describeWithEmphasis() {
-    print('=========');
-    describe();
-    print('=========');
-  }
+  print(spacecraft.side); // 5
 }
