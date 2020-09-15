@@ -4,9 +4,14 @@ import 'dart:math';
 ///
 
 class Spacecraft {
-  String name; // 宇宙飞船名
-  double side; // 边长
-  DateTime launchDate; // 发射时间
+  /* 
+  所有实例变量均会隐式地声明一个 Getter 方法,
+  非 final 类型的实例变量还会隐式地声明一个 Setter 方法
+  因此对于 name, side, launchDate, 你可以获取到这些变量, 并给它们 set 值
+   */
+  String name; // 声明 String  name 并初始化为 null
+  double side = 0; // 声明 double 类型的变量 side 并初始化为 0
+  DateTime launchDate; // 声明 DateTime 类型的变量 launchDate 并初始化为 null
 
   // 构造函数
   Spacecraft(
@@ -14,7 +19,9 @@ class Spacecraft {
     this.side,
     this.launchDate,
   ) {
-    // 这里可以实现初始化代码
+    // this.name = name;
+    // this.side = side;
+    // this.launchDate = launchDate;
   }
 
   // 命名构造函数，转发到默认构造函数
@@ -45,15 +52,30 @@ class Spacecraft {
   }
 }
 
-void main(List<String> args) {
-  final spacecraft =
-      new Spacecraft('Crew Dragon', 4, DateTime.parse('2019-01-01'));
+void main() {
+  final spacecraft = Spacecraft('Crew Dragon', 4, DateTime.parse('2019-01-01'));
 
-  print(spacecraft.instanceVarible); // 实例变量
-  print(spacecraft.describe()); // 实例方法
+  // 用 ?. 避免左边为 null 的情况
+  print(spacecraft?.instanceVarible);
 
-  print(spacecraft.area); // getter
-  spacecraft.area = 25; // setter
+  // 调用实例变量(因为对于非 final 的实例变量, Dart 默认给它一个 getter)
+  print(spacecraft.instanceVarible); // 2
+  // 修改实例变量(因为对于非 final 的实例变量, Dart 默认给它一个 setter)
+  spacecraft?.instanceVarible = 2;
 
-  print(spacecraft.side); // 5
+  // 调用实例方法
+  print(spacecraft.describe()); // 宇宙飞船：Crew Dragon 的发射时间：2019年 (1 years ago)
+
+  // getter
+  print(spacecraft.area); // 16.0
+  // setter
+  spacecraft.area = 25;
+  // 在 area 被 set 成 25 后, side 也变成了 5.0
+  print(spacecraft.side); // 5.0
+
+  // 获取 spacecraft 运行时是什么类型
+  print(spacecraft.runtimeType); // Spacecraft
+
+  // TODO: 构造函数
+  // TODO: 常量构造函数
 }
