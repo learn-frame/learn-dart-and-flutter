@@ -90,7 +90,4 @@ void main() {
 
   // 获取 spacecraft 运行时是什么类型
   print(spacecraft.runtimeType); // Spacecraft
-
-  // TODO: 构造函数
-  // TODO: 常量构造函数
 }
