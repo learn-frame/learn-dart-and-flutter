@@ -1,7 +1,6 @@
 import 'dart:math';
 
 /// 类
-///
 
 class Spacecraft {
   /* 
