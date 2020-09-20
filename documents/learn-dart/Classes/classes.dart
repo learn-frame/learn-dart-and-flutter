@@ -31,7 +31,7 @@ class Spacecraft {
   //   this.launchDate = launchDate;
   // }
 
-  // Dart 的语法糖, 优雅创建构造函数
+  // Dart 的语法糖, 可以更优雅创建构造函数
   Spacecraft(
     this.name,
     this.side,
