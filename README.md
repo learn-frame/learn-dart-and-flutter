@@ -61,6 +61,10 @@ samples, guidance on mobile development, and a full API reference.
 
 - [库与可见性](./documents/learn-dart/Libraries-and-visibility)
 
+- [异步](./documents/learn-dart/Asynchronous)
+
+- [生成器](./documents/learn-dart/Generator)
+
 ## License
 
 Learn Dart and Flutter is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
