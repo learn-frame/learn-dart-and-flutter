@@ -63,7 +63,7 @@ samples, guidance on mobile development, and a full API reference.
 
 - [异步](./documents/learn-dart/Asynchronous)
 
-- [隔离区]](./documents/learn-dart/Isolates)
+- [隔离区](./documents/learn-dart/Isolates)
 
 - [类型定义](./documents/learn-dart/Typedefs)
 
