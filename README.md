@@ -21,9 +21,11 @@ samples, guidance on mobile development, and a full API reference.
 
 - [如何配置 APP 的 Logo](./documents/flutter-cookbook/change-app-launcher-name.md)
 
+- [12 种 Flutter 开发工具推荐](https://mp.weixin.qq.com/s/qJTB9eyAtIJ3PJZ1kh4T7w)
+
 ## Learn Dart
 
-- [Dart 概念一瞥](./documents/learn-dart/Concepts)
+- [Dart 概念一览](./documents/learn-dart/Concepts)
 
 - [关键字](./documents/learn-dart/Keywords/keywords.md)
 
@@ -63,7 +65,13 @@ samples, guidance on mobile development, and a full API reference.
 
 - [异步](./documents/learn-dart/Asynchronous)
 
-- [生成器](./documents/learn-dart/Generator)
+- [隔离区](./documents/learn-dart/Isolates)
+
+- [类型定义](./documents/learn-dart/Typedefs)
+
+- [元数据](./documents/learn-dart/Metadata)
+
+- [注释](./documents/learn-dart/Comments)
 
 ## License
 
