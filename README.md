@@ -23,7 +23,7 @@ samples, guidance on mobile development, and a full API reference.
 
 - [12 种 Flutter 开发工具推荐](https://mp.weixin.qq.com/s/qJTB9eyAtIJ3PJZ1kh4T7w)
 
-## Learn Dart
+## Learn Dart programming language
 
 - [Dart 概念一览](./documents/learn-dart/Concepts)
 
