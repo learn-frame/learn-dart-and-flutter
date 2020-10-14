@@ -1,4 +1,4 @@
-import './classes.dart';
+import 'spacecraft.dart';
 
 // 继承
 class Orbiter extends Spacecraft {
@@ -28,9 +28,6 @@ class MockSpaceship implements Spacecraft {
   double area;
 
   @override
-  int instanceVarible;
-
-  @override
   DateTime launchDate;
 
   @override
@@ -38,6 +35,10 @@ class MockSpaceship implements Spacecraft {
 
   @override
   double side;
+
+  @override
+  // TODO: implement age
+  int get age => throw UnimplementedError();
 
   @override
   String describe() {

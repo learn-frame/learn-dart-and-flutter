@@ -3,7 +3,7 @@
 */
 
 import 'dart:io';
-import '../Classes/classes.dart';
+import '../Classes/spacecraft.dart';
 
 var voyager = new Spacecraft('旅行者一号', 4, DateTime(1977, 9, 5));
 
