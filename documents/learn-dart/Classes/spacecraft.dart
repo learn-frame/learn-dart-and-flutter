@@ -25,7 +25,7 @@ class Spacecraft {
     this.launchDate,
   );
 
-  // 命名构造函数，转发到默认构造函数
+  // 命名式构造函数，转发到默认构造函数
   Spacecraft.unlaunched(String name, double side)
       : this(
           name,
