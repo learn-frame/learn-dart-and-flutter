@@ -28,7 +28,7 @@ class Spacecraft {
   // 命名式构造函数
   // 因为构造函数不能被继承, 同理命名式构造函数也不会被继承
   // 如果要在子类中提供一个与父类命名构造函数名字一样的命名构造函数, 需要在子类中显式地声明
-  // 下面这个“取消发射”的例子, 就是给 launchDate 设默认参数 null, 方便使用
+  // 下面这个“取消发射”的例子, 就是给 launchDate 设默认参数 null, 以方便 new 一个特定的实例, 很好
   Spacecraft.unlaunched(String name, double side)
       : this(
           name,
