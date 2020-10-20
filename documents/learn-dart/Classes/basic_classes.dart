@@ -13,12 +13,8 @@ class Spacecraft {
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  // 构造函数
-  // 默认构造函数: 如果没有声明构造函数, 那么 Dart 会自动生成一个无参数的构造函数, 并且该构造函数会调用其父类的无参数构造方法
-  // 构造函数不能被继承: 子类不会继承父类的构造函数, 如果子类没有声明构造函数, 那么只会有一个默认无参数的构造函数
-  //
-
-  // Dart 的语法糖, 可以更优雅在构造函数中为实例变量赋值
+  // 构造函数 (单独放在一个文件中讲)
+  // Dart 初始化实例变量的语法糖, 可以更优雅在构造函数中为实例变量赋值
   Spacecraft(
     this.name,
     this.side,
@@ -28,7 +24,7 @@ class Spacecraft {
   // 命名式构造函数
   // 因为构造函数不能被继承, 同理命名式构造函数也不会被继承
   // 如果要在子类中提供一个与父类命名构造函数名字一样的命名构造函数, 需要在子类中显式地声明
-  // 下面这个“取消发射”的例子, 就是给 launchDate 设默认参数 null, 以方便 new 一个特定的实例, 很好
+  // 下面这个"取消发射"的例子, 就是给 launchDate 设默认参数 null, 以方便 new 一个特定的实例, 很好
   Spacecraft.unlaunched(String name, double side)
       : this(
           name,
@@ -38,15 +34,9 @@ class Spacecraft {
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  // getter
-  double get area => side * side;
-
-  // setter
-  set area(double value) => side = sqrt(value);
-
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
   // 实例方法
+  // 对象的实例方法可以访问实例变量和 this
+  // 在实例方法中不必使用 this 就可以取到实例变量
   String describe() {
     if (launchDate != null) {
       final years = DateTime.now().difference(launchDate).inDays ~/ 365;
@@ -55,6 +45,14 @@ class Spacecraft {
       return '尚未发射';
     }
   }
+
+  // getter
+  double get area => side * side;
+
+  // setter
+  set area(double value) => side = sqrt(value);
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 }
 
 void main() {

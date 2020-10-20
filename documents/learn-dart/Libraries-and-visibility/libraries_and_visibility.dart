@@ -16,7 +16,7 @@ import '../Classes/abstract_classes.dart';
 import '../Classes/constructor.dart' show Spacecraft;
 
 // 给导入的库设一个别名(Specifying a library prefix)
-import '../Classes/spacecraft.dart' as classLib;
+import '../Classes/basic_classes.dart' as classLib;
 
 // 可以通过别名的方式来引入库里的成员
 final spacecraft = classLib.Spacecraft('日狗', 0, DateTime.now());

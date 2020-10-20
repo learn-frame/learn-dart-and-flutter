@@ -1,4 +1,4 @@
-import 'spacecraft.dart';
+import 'basic_classes.dart';
 
 // 继承
 class Orbiter extends Spacecraft {

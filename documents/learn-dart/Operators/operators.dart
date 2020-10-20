@@ -22,7 +22,7 @@
 ///
 
 import 'dart:html';
-import '../Classes/spacecraft.dart';
+import '../Classes/basic_classes.dart';
 
 void main() {
   // 在 Dart 中 null 和 null 是相等的, 注意和 JavaScript 区分
