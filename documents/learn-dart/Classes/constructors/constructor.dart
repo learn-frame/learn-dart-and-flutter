@@ -43,6 +43,26 @@ class Person {
     lastName = lastName;
     age = 18;
   }
+
+  // 使用初始化列表在构造函数体执行前设置实例变量
+  // 初始化列表用来设置 final 字段是非常好用的
+  Person.yanceyFamily(String firstName, int age)
+      : firstName = firstName,
+        lastName = 'Yancey',
+        age = age;
+
+  // 在开发模式下还可以在初始化列表中使用 assert 来验证输入数据
+  Person.yamamotoFamily(this.firstName, this.lastName)
+      : assert(lastName.contains('Yamamoto')) {
+    // do something
+  }
+
+  // 重定向构造函数
+  // 如下这个构造函数, 需求是 firstName 跟 lastName 都一样, 故传两个参数就够了
+  // 但这个类需要三个参数, 故需要映射到主构造函数, 这就是重定向构造函数
+  Person.repeatName(String name, int age) : this(name, name, age);
+
+  // 常量构造函数, 戳 ./constant_constructors.dart
 }
 
 // 子类调用父类非默认构造函数的顺序:

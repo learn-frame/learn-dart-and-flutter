@@ -6,14 +6,14 @@ class Spacecraft {
   // 如果你在声明一个实例变量的时候就将其初始化(而不是在构造函数或其它方法中), 那么
   // 该实例变量的值就会在对象实例创建的时候被设置, 该过程会在构造函数以及它的初始化
   // 器列表执行前.
-  String name;
+  final String name;
   double side = 0;
-  DateTime launchDate;
+  final DateTime launchDate;
   final age = 1;
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  // 构造函数 (单独放在一个文件中讲)
+  // 构造函数,  更详细内容关注 ./constructor.dart
   // Dart 初始化实例变量的语法糖, 可以更优雅在构造函数中为实例变量赋值
   Spacecraft(
     this.name,

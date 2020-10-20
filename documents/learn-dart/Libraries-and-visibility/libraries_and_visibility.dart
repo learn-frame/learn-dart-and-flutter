@@ -13,7 +13,7 @@
 import '../Classes/abstract_classes.dart';
 
 // 导入库的某部分
-import '../Classes/constructor.dart' show Spacecraft;
+import '../Classes/constructors/constructor.dart' show Spacecraft;
 
 // 给导入的库设一个别名(Specifying a library prefix)
 import '../Classes/basic_classes.dart' as classLib;
