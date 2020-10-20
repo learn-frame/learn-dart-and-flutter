@@ -55,8 +55,11 @@ void main(List<String> arguments) {
     return _nobleGases[atomicNumber] != null;
   }
 
+  isNoble(1);
+
   // 箭头函数
   bool isNoble2(int atomicNumber) => _nobleGases[atomicNumber] != null;
+  isNoble2(1);
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -70,6 +73,8 @@ void main(List<String> arguments) {
   // {} 中的三个参数都是可选的, 比如你可以不传入 content 这个参数
   // 即便如此, 你也可以给参数加上 @required 的注解
   // 此时调用函数会报 warning, 但不会影响运行: The parameter 'hidden' is required
+
+  // ignore: missing_required_param
   enableFlagsNamed('', bold: 500, animal: Animal('Husky', 18));
 
   // 可选参数之 - 位置参数
