@@ -18,15 +18,14 @@ void main(List<String> args) {
   print(colors); // [Color.red, Color.green, Color.blue]
 
   // 也可以跟 switch...case 配合
-  var aColor = Color.blue;
   switch (Color.blue) {
     case Color.red:
-      print('红如玫瑰！');
+      print('红的');
       break;
     case Color.green:
-      print('绿如草原！');
+      print('绿的');
       break;
     default: // 没有该语句会出现警告。
-      print(aColor); // 'Color.blue'
+      print('蓝的'); // 'Color.blue'
   }
 }
