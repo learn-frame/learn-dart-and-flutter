@@ -77,9 +77,9 @@ samples, guidance on mobile development, and a full API reference.
 
   - [枚举](./documents/learn-dart/Classes/enums.dart)
 
-  - [隐式接口 (implements)](./documents/learn-dart/Classes/implicit_interfaces.dart)
+  - [实现(隐式接口)](./documents/learn-dart/Classes/implicit_interfaces.dart)
 
-  - [Extends](./documents/learn-dart/Classes/extends.dart)
+  - [继承(Extends)](./documents/learn-dart/Classes/extends.dart)
 
   - [Mixins](./documents/learn-dart/Classes/mixins.dart)
 
