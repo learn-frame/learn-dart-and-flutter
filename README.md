@@ -59,6 +59,30 @@ samples, guidance on mobile development, and a full API reference.
 
 - [类](./documents/learn-dart/Classes)
 
+  - [概念](./documents/learn-dart/Classes/concepts.md)
+
+  - [一个类的示例](./documents/learn-dart/Classes/basic_classes.dart)
+
+  - [构造函数](./documents/learn-dart/Classes/constructors)
+
+    - [一个构造函数示例](./documents/learn-dart/Classes/constructors/constructor.dart)
+
+    - [常量构造函数](./documents/learn-dart/Classes/constructors/constant_constructors.dart)
+
+    - [工厂构造函数](./documents/learn-dart/Classes/constructors/factory_constructors.dart)
+
+  - [可调用类](./documents/learn-dart/Classes/callable_claases.dart)
+
+  - [抽象类](./documents/learn-dart/Classes/abstract_classes.dart)
+
+  - [枚举](./documents/learn-dart/Classes/enums.dart)
+
+  - [隐式接口](./documents/learn-dart/Classes/implicit_interfaces.dart)
+
+  - [Extends](./documents/learn-dart/Classes/extends.dart)
+
+  - [Mixins](./documents/learn-dart/Classes/mixins.dart)
+
 - [泛型](./documents/learn-dart/Generics)
 
 - [库与可见性](./documents/learn-dart/Libraries-and-visibility)
