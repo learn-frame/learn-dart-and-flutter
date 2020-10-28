@@ -79,7 +79,7 @@ samples, guidance on mobile development, and a full API reference.
 
   - [实现(隐式接口)](./documents/learn-dart/Classes/implicit_interfaces.dart)
 
-  - [继承(Extends)](./documents/learn-dart/Classes/extends.dart)
+  - [继承(Extends)](./documents/learn-dart/Classes/extends)
 
   - [Mixins](./documents/learn-dart/Classes/mixins.dart)
 
