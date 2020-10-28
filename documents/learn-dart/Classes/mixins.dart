@@ -1,11 +1,6 @@
-import 'basic_classes.dart';
+/// Mixin 是一种在多重继承中复用某个类中代码的方法模式
 
-// 继承
-class Orbiter extends Spacecraft {
-  double altitude;
-  Orbiter(String name, double side, DateTime launchDate, this.altitude)
-      : super(name, side, launchDate);
-}
+import 'basic_classes.dart';
 
 class Piloted {
   int astronauts = 1;

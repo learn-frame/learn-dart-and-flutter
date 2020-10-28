@@ -77,11 +77,13 @@ samples, guidance on mobile development, and a full API reference.
 
   - [枚举](./documents/learn-dart/Classes/enums.dart)
 
-  - [实现(隐式接口)](./documents/learn-dart/Classes/implicit_interfaces.dart)
+  - [隐式接口(OOP 中的 implements)](./documents/learn-dart/Classes/implicit_interfaces.dart)
 
-  - [继承(Extends)](./documents/learn-dart/Classes/extends)
+  - [Extends(OOP 中的继承))](./documents/learn-dart/Classes/extends)
 
   - [Mixins](./documents/learn-dart/Classes/mixins.dart)
+
+  - [类变量和方法(OOP 中的静态属性和静态方法)](./documents/learn-dart/Classes/class_variables_and_methods.dart)
 
 - [泛型](./documents/learn-dart/Generics)
 
