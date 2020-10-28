@@ -18,7 +18,7 @@
 ///
 /// 级联运算符
 ///
-/// TODO: 在 Dart 中, 运算符也都是类, 它们可以被重写
+/// 在 Dart 中, 运算符也都是类, 它们可以被重写 (详见 ../Classes/Extends)
 ///
 
 import 'dart:html';

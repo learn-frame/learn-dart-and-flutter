@@ -1,6 +1,6 @@
 /// 库(Library)与可见性
 ///
-/// TODO: 库(Library)可以通过包(Package)来创建,
+/// 库(Library)可以通过包(Package)来创建,
 /// 关于创建依赖库包可参考 https://dart.cn/guides/packages
 ///
 /// - 如何组织库的源文件
