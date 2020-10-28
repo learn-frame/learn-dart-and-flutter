@@ -9,7 +9,7 @@ void main() {
   var names = <dynamic>{}; // 类型+{}的形式创建Set。
   Set<String> ages = {}; // 声明类型变量的形式创建 Set
 
-  var maps = {}; // 注意这种形式创建的是 Map 而非 Set
+  var maps = {}; // 🔞 注意这种形式创建的是 Map 而非 Set
 
   names.add('kiss');
   print(names); // {kiss}
