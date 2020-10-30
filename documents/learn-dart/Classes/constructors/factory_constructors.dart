@@ -41,3 +41,19 @@ void main(List<String> args) {
 /// Tips:
 /// putIfAbsent 是 Map 的一个方法, 它只会往 map 中新增不存在的 key, 而不会覆盖已有 key
 /// 文档可戳: https://api.dart.dev/stable/dart-core/Map/putIfAbsent.html
+
+class Square extends Shape {}
+
+class Circle extends Shape {}
+
+class Shape {
+  Shape();
+
+  factory Shape.fromTypeName(String typeName) {
+    if (typeName == 'square') return Square();
+    if (typeName == 'circle') return Circle();
+
+    print('I don\'t recognize $typeName');
+    return null;
+  }
+}
