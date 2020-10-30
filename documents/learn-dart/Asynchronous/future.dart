@@ -5,7 +5,6 @@ import 'dart:convert';
 const yanceyOfficialRepoAPI = '/users/YanceyOfficial/repos';
 const yanceyBlogRepoAPI = '/orgs/Yancey-Blog/repos';
 
-// FIXME:
 Future<HttpClientResponse> getData(String path) async {
   const apiDomain = 'https://api.github.com';
   final url = '$apiDomain$path';
