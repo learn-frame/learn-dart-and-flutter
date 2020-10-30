@@ -5,6 +5,7 @@ import 'dart:convert';
 const yanceyOfficialRepoAPI = '/users/YanceyOfficial/repos';
 const yanceyBlogRepoAPI = '/orgs/Yancey-Blog/repos';
 
+// FIXME:
 Future<HttpClientResponse> getData(String path) async {
   const apiDomain = 'https://api.github.com';
   final url = '$apiDomain$path';
@@ -16,7 +17,7 @@ Future<HttpClientResponse> getData(String path) async {
     if (response.statusCode == HttpStatus.ok) {
       var json = await response.transform(utf8.decoder).join();
       var data = jsonDecode(json);
-      return data;
+      return data as Future<HttpClientResponse>;
     } else {
       throw 'Error getting IP address:\nHttp status ${response.statusCode}';
     }
