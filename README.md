@@ -99,6 +99,8 @@ samples, guidance on mobile development, and a full API reference.
 
 - [注释](./documents/learn-dart/Comments)
 
+- [可迭代集合](./documents/learn-dart/Iterables)
+
 ## License
 
 Learn Dart and Flutter is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
