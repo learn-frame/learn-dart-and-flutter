@@ -35,6 +35,19 @@ Future<HttpClientResponse> getData(String path) async {
 //   });
 // }
 
+// sleep 方法用 async/await 实现
+Future<void> printWithDelay(int second) async {
+  await Future.delayed(Duration(seconds: second));
+  print('${second}s 后打印出我');
+}
+
+// sleep 方法用 then 实现
+Future<void> printWithDelayThen(int second) {
+  return Future.delayed(Duration(seconds: second)).then((_) {
+    print('${second}s 后打印出我');
+  });
+}
+
 void main() async {
   print(getData(yanceyBlogRepoAPI));
 
