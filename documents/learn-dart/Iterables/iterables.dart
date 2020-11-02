@@ -45,4 +45,8 @@ void main(List<String> args) {
 
   // skipWhile, 根据条件获取它之后的子可迭代集合
   print(iterable.skipWhile((number) => number != 3)); // (3, 4, 5, 6)
+
+  // 附录1: 通过 whereType 过滤指定类型的参数
+  var objects = [1, "a", 2, "b", 3];
+  var ints = objects.whereType<int>();
 }
