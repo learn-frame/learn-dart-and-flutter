@@ -141,13 +141,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.0.10"
-  effective_dart:
-    dependency: "direct dev"
-    description:
-      name: effective_dart
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "1.2.4"
   english_words:
     dependency: "direct main"
     description:
