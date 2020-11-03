@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'screens/home.dart';
+import 'screens/home/home.dart';
 import 'widgets/bottom_navigation_bar.dart';
 
 void main() => runApp(YanceyBlog());
