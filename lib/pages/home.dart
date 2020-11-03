@@ -3,7 +3,7 @@ import 'package:english_words/english_words.dart';
 
 class _RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
-  final Set<WordPair> _saved = new Set<WordPair>();
+  final _saved = <WordPair>{};
   final _biggerFont = TextStyle(fontSize: 18.0);
 
   Widget _buildSuggestions() {
@@ -21,14 +21,14 @@ class _RandomWordsState extends State<RandomWords> {
   }
 
   Widget _buildRow(WordPair pair) {
-    final bool alreadySaved = _saved.contains(pair);
+    final alreadySaved = _saved.contains(pair);
 
     return ListTile(
       title: Text(
         pair.asPascalCase,
         style: _biggerFont,
       ),
-      trailing: new Icon(
+      trailing: Icon(
         // 新增代码开始 ...
         alreadySaved ? Icons.favorite : Icons.favorite_border,
         color: alreadySaved ? Colors.red : null,

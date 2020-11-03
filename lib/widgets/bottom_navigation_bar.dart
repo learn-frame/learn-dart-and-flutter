@@ -17,16 +17,16 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
     });
 
     if (index != 0) {
-      this._pushSaved();
+      _pushSaved();
     }
   }
 
   void _pushSaved() {
     Navigator.of(context).push(
-      new MaterialPageRoute<void>(
+      MaterialPageRoute<void>(
         builder: (BuildContext context) {
-          return new Scaffold(
-            appBar: new AppBar(
+          return Scaffold(
+            appBar: AppBar(
               title: const Text('Saved Suggestions'),
             ),
             body: Center(
