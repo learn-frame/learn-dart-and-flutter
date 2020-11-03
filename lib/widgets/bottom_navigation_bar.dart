@@ -44,7 +44,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          title: Text('Suki'),
+          title: Text('Contacts'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.contacts),

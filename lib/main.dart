@@ -4,6 +4,7 @@ import './widgets/bottom_navigation_bar.dart';
 
 void main() => runApp(MyApp());
 
+/// The main entry for this app.x
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Startup Name Generator',
 
       // 修改 Material Design 主题
-      theme: new ThemeData(
+      theme: ThemeData(
         primaryColor: Colors.white,
       ),
       home: Scaffold(
