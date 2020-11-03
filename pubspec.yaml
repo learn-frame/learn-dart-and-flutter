@@ -44,8 +44,8 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path_ios: "assets/launcher/suki-chat-icon.png"
-  image_path_android: "assets/launcher/suki-chat-icon.png"
+  image_path_ios: "assets/logos/suki-chat-icon.png"
+  image_path_android: "assets/logos/suki-chat-icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
