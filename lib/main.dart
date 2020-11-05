@@ -1,17 +1,22 @@
+// Copyright (c) 2020 Yancey Inc. and its affiliates.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'package:flutter/material.dart';
-import './pages/home.dart';
-import './widgets/bottom_navigation_bar.dart';
+import 'screens/home/home.dart';
+import 'widgets/bottom_navigation_bar.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(YanceyBlog());
 
-class MyApp extends StatelessWidget {
+/// The main entry for this app.
+class YanceyBlog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Startup Name Generator',
 
       // 修改 Material Design 主题
-      theme: new ThemeData(
+      theme: ThemeData(
         primaryColor: Colors.white,
       ),
       home: Scaffold(
