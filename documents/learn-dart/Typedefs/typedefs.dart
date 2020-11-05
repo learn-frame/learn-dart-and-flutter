@@ -6,7 +6,7 @@
 class SortedCollection {
   Function compare;
 
-  SortedCollection(int f(Object a, Object b)) {
+  SortedCollection(int Function(Object a, Object b) f) {
     compare = f;
   }
 }
@@ -18,7 +18,7 @@ class SortedCollection1 {
   // 手动给 compare 添加类型定义
   Compare compare;
 
-  SortedCollection1(int f(Object a, Object b)) {
+  SortedCollection1(int Function(Object a, Object b) f) {
     compare = f;
   }
 }
@@ -28,11 +28,11 @@ typedef Compare1<T> = int Function(T a, T b);
 
 void main() {
   int sort(Object a, Object b) => 0;
-  SortedCollection coll = SortedCollection(sort);
+  var coll = SortedCollection(sort);
   // 但此时的 compare 只能被推断为 Function 类型
   print(coll.compare);
 
-  SortedCollection1 coll1 = SortedCollection1(sort);
+  var coll1 = SortedCollection1(sort);
   // 此时的 compare 就可以被推断成 int Function(Object, Object)
   print(coll1.compare);
 
