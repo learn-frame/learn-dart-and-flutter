@@ -8,40 +8,78 @@
 import 'package:bloc/bloc.dart';
 import 'models/user_model.dart';
 
-// 创建一个 Cubit
 class UserCubit extends Cubit<UserModel> {
   UserCubit(UserModel initialState) : super(initialState);
 
-  void updageContent(String newContent) =>
-      emit(UserModel(id: state.id, title: state.title, content: newContent));
+  void update(String newContent) {
+    // 每个 mutation 都有一个 addError, 可以处理本次错误
+    addError(Exception('update error!'), StackTrace.current);
+    emit(UserModel(id: state.id, title: state.title, content: newContent));
+  }
 
-  // 可以通过重写 onChange 来获取每次变更
+  // 可以通过重写 onChange 来处理 Cubit 级别的变更记录
   // 可以拿到当前状态(currentState)和更新后的状态(nextState)
   @override
   void onChange(Change<UserModel> change) {
     print(change);
     super.onChange(change);
   }
+
+  // 可以通过重写 onError 来处理 Cubit 级别的错误记录
+  @override
+  void onError(Object error, StackTrace stackTrace) {
+    print('$error, $stackTrace');
+    super.onError(error, stackTrace);
+  }
+}
+
+class NumCubit extends Cubit<int> {
+  NumCubit(int initialState) : super(initialState);
+
+  void sum() => emit(state + 1);
+}
+
+// 总线监听器
+class BlocObserverBus extends BlocObserver {
+  // 总线级别的 onChange
+  @override
+  void onChange(Cubit cubit, Change change) {
+    print('${cubit.runtimeType} $change');
+    super.onChange(cubit, change);
+  }
+
+  // 总线级别的 onError
+  @override
+  void onError(Cubit cubit, Object error, StackTrace stackTrace) {
+    print('${cubit.runtimeType} $error $stackTrace');
+    super.onError(cubit, error, stackTrace);
+  }
 }
 
 void main() async {
+  // 总线监听
+  // 如果 Cubit 内部重写了的 onChange, 会先调用内部的, 再调用总线的
+  Bloc.observer = BlocObserverBus();
+
+  // - - - - - - - - - - - - - - - - - - - - - -
+
   // 创建 Cubit 的实例
-  final cubit = UserCubit(UserModel(id: '123', title: '标题', content: '内容'));
+  final userCubit = UserCubit(UserModel(id: '123', title: '标题', content: '内容'));
 
-  // 对每次更新进行监听
-  final subscription =
-      cubit.listen((UserModel userModel) => print(userModel.content));
+  // 对每次更新进行监听订阅
+  // final subscription =
+  //     userCubit.listen((UserModel userModel) => print(userModel.content));
 
-  // print(cubit.state.content); // 内容
-
-  cubit.updageContent('更新的内容');
-  cubit.updageContent('更新的内容1');
-  cubit.updageContent('更新的内容2');
-  // print(cubit.state.content); // 更新的内容2
+  userCubit..update('更新的内容')..update('更新的内容1')..update('更新的内容2');
 
   // 取消订阅
   // await subscription.cancel();
 
   // 关闭内部的 cubit 流
-  await cubit.close();
+  // await userCubit.close();
+
+  // - - - - - - - - - - - - - - - - - - - - - -
+
+  final numCubit = NumCubit(0);
+  numCubit..sum()..sum();
 }
