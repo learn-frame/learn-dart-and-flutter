@@ -17,89 +17,89 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Flutter CookBook
 
-- [关于 配置 zsh 的 Flutter 环境](./documents/flutter-cookbook/zsh-config.md)
+- [关于 配置 zsh 的 Flutter 环境](./notes/flutter-cookbook/zsh-config.md)
 
-- [如何配置 APP 的 Logo](./documents/flutter-cookbook/change-app-launcher-name.md)
+- [如何配置 APP 的 Logo](./notes/flutter-cookbook/change-app-launcher-name.md)
 
 - [12 种 Flutter 开发工具推荐](https://mp.weixin.qq.com/s/qJTB9eyAtIJ3PJZ1kh4T7w)
 
 ## Learn Dart programming language
 
-- [Dart 概念一览](./documents/learn-dart/Concepts)
+- [Dart 概念一览](./notes/learn-dart/Concepts)
 
-- [关键字](./documents/learn-dart/Keywords/keywords.md)
+- [关键字](./notes/learn-dart/Keywords/keywords.md)
 
-- [变量(深入理解 final 和 const)](./documents/learn-dart/Variables)
+- [变量(深入理解 final 和 const)](./notes/learn-dart/Variables)
 
-- [内置类型](./documents/learn-dart/Built-in-types)
+- [内置类型](./notes/learn-dart/Built-in-types)
 
-  - [数字](./documents/learn-dart/Built-in-types/numbers.dart)
+  - [数字](./notes/learn-dart/Built-in-types/numbers.dart)
 
-  - [字符串](./documents/learn-dart/Built-in-types/strings.dart)
+  - [字符串](./notes/learn-dart/Built-in-types/strings.dart)
 
-  - [Boolean](./documents/learn-dart/Built-in-types/booleans.dart)
+  - [Boolean](./notes/learn-dart/Built-in-types/booleans.dart)
 
-  - [数组](./documents/learn-dart/Built-in-types/lists.dart)
+  - [数组](./notes/learn-dart/Built-in-types/lists.dart)
 
-  - [Set](./documents/learn-dart/Built-in-types/sets.dart)
+  - [Set](./notes/learn-dart/Built-in-types/sets.dart)
 
-  - [Map](./documents/learn-dart/Built-in-types/map.dart)
+  - [Map](./notes/learn-dart/Built-in-types/map.dart)
 
-  - [Runes 与 grapheme clusters](./documents/learn-dart/Built-in-types/runes_and_grapheme_clusters.dart)
+  - [Runes 与 grapheme clusters](./notes/learn-dart/Built-in-types/runes_and_grapheme_clusters.dart)
 
-  - [symbol](./documents/learn-dart/Built-in-types/symbol.dart)
+  - [symbol](./notes/learn-dart/Built-in-types/symbol.dart)
 
-- [函数](./documents/learn-dart/Functions)
+- [函数](./notes/learn-dart/Functions)
 
-- [运算符](./documents/learn-dart/Operators)
+- [运算符](./notes/learn-dart/Operators)
 
-- [流程控制语句](./documents/learn-dart/Control-flow-statements)
+- [流程控制语句](./notes/learn-dart/Control-flow-statements)
 
-- [异常](./documents/learn-dart/Exceptions)
+- [异常](./notes/learn-dart/Exceptions)
 
-- [类](./documents/learn-dart/Classes)
+- [类](./notes/learn-dart/Classes)
 
-  - [概念](./documents/learn-dart/Classes/concepts.md)
+  - [概念](./notes/learn-dart/Classes/concepts.md)
 
-  - [一个类的示例](./documents/learn-dart/Classes/basic_classes.dart)
+  - [一个类的示例](./notes/learn-dart/Classes/basic_classes.dart)
 
-  - [构造函数](./documents/learn-dart/Classes/constructors)
+  - [构造函数](./notes/learn-dart/Classes/constructors)
 
-    - [一个构造函数示例](./documents/learn-dart/Classes/constructors/constructor.dart)
+    - [一个构造函数示例](./notes/learn-dart/Classes/constructors/constructor.dart)
 
-    - [常量构造函数](./documents/learn-dart/Classes/constructors/constant_constructors.dart)
+    - [常量构造函数](./notes/learn-dart/Classes/constructors/constant_constructors.dart)
 
-    - [工厂构造函数](./documents/learn-dart/Classes/constructors/factory_constructors.dart)
+    - [工厂构造函数](./notes/learn-dart/Classes/constructors/factory_constructors.dart)
 
-  - [可调用类](./documents/learn-dart/Classes/callable_claases.dart)
+  - [可调用类](./notes/learn-dart/Classes/callable_claases.dart)
 
-  - [抽象类](./documents/learn-dart/Classes/abstract_classes.dart)
+  - [抽象类](./notes/learn-dart/Classes/abstract_classes.dart)
 
-  - [枚举](./documents/learn-dart/Classes/enums.dart)
+  - [枚举](./notes/learn-dart/Classes/enums.dart)
 
-  - [隐式接口(OOP 中的 implements)](./documents/learn-dart/Classes/implicit_interfaces.dart)
+  - [隐式接口(OOP 中的 implements)](./notes/learn-dart/Classes/implicit_interfaces.dart)
 
-  - [Extends(OOP 中的继承))](./documents/learn-dart/Classes/extends)
+  - [Extends(OOP 中的继承))](./notes/learn-dart/Classes/extends)
 
-  - [Mixins](./documents/learn-dart/Classes/mixins.dart)
+  - [Mixins](./notes/learn-dart/Classes/mixins.dart)
 
-  - [类变量和方法(OOP 中的静态属性和静态方法)](./documents/learn-dart/Classes/class_variables_and_methods.dart)
+  - [类变量和方法(OOP 中的静态属性和静态方法)](./notes/learn-dart/Classes/class_variables_and_methods.dart)
 
-- [泛型](./documents/learn-dart/Generics)
+- [泛型](./notes/learn-dart/Generics)
 
-- [库与可见性](./documents/learn-dart/Libraries-and-visibility)
+- [库与可见性](./notes/learn-dart/Libraries-and-visibility)
 
-- [异步](./documents/learn-dart/Asynchronous)
+- [异步](./notes/learn-dart/Asynchronous)
 
-- [隔离区](./documents/learn-dart/Isolates)
+- [隔离区](./notes/learn-dart/Isolates)
 
-- [类型定义](./documents/learn-dart/Typedefs)
+- [类型定义](./notes/learn-dart/Typedefs)
 
-- [元数据](./documents/learn-dart/Metadata)
+- [元数据](./notes/learn-dart/Metadata)
 
-- [注释](./documents/learn-dart/Comments)
+- [注释](./notes/learn-dart/Comments)
 
-- [可迭代集合](./documents/learn-dart/Iterables)
+- [可迭代集合](./notes/learn-dart/Iterables)
 
 ## License
 

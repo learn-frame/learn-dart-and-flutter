@@ -35,6 +35,8 @@ dependencies:
   dio: ^3.0.10
   yaml: ^2.2.1
   stack_trace: ^1.9.5
+  bloc: ^6.1.0
+  flutter_bloc: ^6.1.1
 
 dev_dependencies:
   flutter_test:
