@@ -13,12 +13,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: ListView.builder(
         padding: EdgeInsets.all(16.0),
-        itemBuilder: /*1*/ (context, i) {
-          if (i.isOdd) return Divider(); /*2*/
+        itemBuilder: (context, i) {
+          if (i.isOdd) return Divider();
 
-          final index = i ~/ 2; /*3*/
+          final index = i ~/ 2;
           if (index >= _suggestions.length) {
-            _suggestions.addAll(generateWordPairs().take(10)); /*4*/
+            _suggestions.addAll(generateWordPairs().take(10));
           }
           return _buildRow(_suggestions[index]);
         },
@@ -35,12 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
         style: _biggerFont,
       ),
       trailing: Icon(
-        // 新增代码开始 ...
         alreadySaved ? Icons.favorite : Icons.favorite_border,
         color: alreadySaved ? Colors.red : null,
       ),
       onTap: () {
-        // 增加如下 9 行代码...
         setState(() {
           alreadySaved ? _saved.remove(pair) : _saved.add(pair);
         });
