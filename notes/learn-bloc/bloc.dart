@@ -1,4 +1,4 @@
-/// Business Logic Component(BLoC)
+/// Business Logic Component(Bloc)
 /// Bloc 是 Cubit 的一种特殊类型, 可将传入事件转换为传出状态
 
 import 'package:bloc/bloc.dart';
