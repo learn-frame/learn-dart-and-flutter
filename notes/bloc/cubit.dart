@@ -10,8 +10,7 @@ class UserCubit extends Cubit<UserModel> {
   UserCubit(UserModel initialState) : super(initialState);
 
   void updateGender(String newGender) {
-    // 每个 mutation 都有一个 addError, 可以处理本次错误
-    addError(Exception('udate error!'), StackTrace.current);
+    // addError(Exception('udate error!'), StackTrace.current);
     emit(UserModel(id: state.id, name: state.name, gender: newGender));
   }
 

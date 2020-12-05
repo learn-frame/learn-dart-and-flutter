@@ -18,6 +18,7 @@ class UserBloc extends Bloc<UserEvent, UserModel> {
   Stream<UserModel> mapEventToState(UserEvent event) async* {
     switch (event) {
       case UserEvent.updateName:
+        // addError(Exception('udate error!'), StackTrace.current);
         yield updateName(WordPair.random().toString());
         break;
     }
@@ -26,14 +27,14 @@ class UserBloc extends Bloc<UserEvent, UserModel> {
   // onChange 包含 currentState, nextState
   @override
   void onChange(Change<UserModel> change) {
-    print('bloc 级别 $change');
+    print('bloc 级别的 $change');
     super.onChange(change);
   }
 
   // onTransition 包含 currentState, event, nextState
   @override
   void onTransition(Transition<UserEvent, UserModel> transition) {
-    print('bloc 级别 $transition');
+    print('bloc 级别的 $transition');
     super.onTransition(transition);
   }
 
@@ -45,7 +46,7 @@ class UserBloc extends Bloc<UserEvent, UserModel> {
 
   @override
   void onEvent(UserEvent event) {
-    print('bloc 级别 $event');
+    print('bloc 级别的 $event');
     super.onEvent(event);
   }
 }
@@ -54,13 +55,13 @@ class UserBloc extends Bloc<UserEvent, UserModel> {
 class BlocObserverBus extends BlocObserver {
   @override
   void onChange(Cubit cubit, Change change) {
-    print('bus 级别 $change');
+    print('bus 级别的 $change');
     super.onChange(cubit, change);
   }
 
   @override
   void onTransition(Bloc bloc, Transition transition) {
-    print('bus 级别 $transition');
+    print('bus 级别的 $transition');
     super.onTransition(bloc, transition);
   }
 
@@ -72,7 +73,7 @@ class BlocObserverBus extends BlocObserver {
 
   @override
   void onEvent(Bloc bloc, Object event) {
-    print('bus 级别 $event');
+    print('bus 级别的 $event');
     super.onEvent(bloc, event);
   }
 }
@@ -81,10 +82,11 @@ void main() async {
   Bloc.observer = BlocObserverBus();
 
   final userBloc = UserBloc(UserModel(id: '1', name: 'Yancey', gender: 'male'));
-  userBloc..add(UserEvent.updateName);
-  // ..add(UserEvent.updateName)
-  // ..add(UserEvent.updateName)
-  // ..add(UserEvent.updateName);
+  userBloc
+    ..add(UserEvent.updateName)
+    ..add(UserEvent.updateName)
+    ..add(UserEvent.updateName)
+    ..add(UserEvent.updateName);
 
   // print(userBloc.state.gender); // male
   // userBloc.add(UserEvent.updateName);
