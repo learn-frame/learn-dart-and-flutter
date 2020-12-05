@@ -2,8 +2,8 @@ import 'package:meta/meta.dart';
 
 class UserModel {
   final String id;
-  final String title;
-  final String content;
+  final String name;
+  final String gender;
 
-  UserModel({@required this.id, @required this.title, @required this.content});
+  UserModel({@required this.id, @required this.name, @required this.gender});
 }
