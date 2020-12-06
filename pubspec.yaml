@@ -37,6 +37,7 @@ dependencies:
   stack_trace: ^1.9.5
   bloc: ^6.1.0
   flutter_bloc: ^6.1.1
+  equatable: ^1.2.5
 
 dev_dependencies:
   flutter_test:

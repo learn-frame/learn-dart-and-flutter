@@ -130,3 +130,13 @@ class MyBloc extends Bloc {
   }
 }
 ```
+
+## [测试](https://bloclibrary.dev/#/zh-cn/testing)
+
+## 命名规范
+
+- Event 使用 **BlocSubject + Noun (optional) + Verb (event, 过去时)**, 如 CounterStarted CounterIncremented CounterDecremented CounterIncrementRetried
+
+- State 使用 **BlocSubject + Verb (action) + State**, 如 CounterInitial CounterLoadInProgress CounterLoadSuccess CounterLoadFailure
+
+## [equatable](https://pub.dev/packages/equatable/install)
